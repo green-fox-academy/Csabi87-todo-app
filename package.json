@@ -19,6 +19,7 @@
     "homepage": "https://github.com/green-fox-academy/Csabi87-todo-app#readme",
     "type": "module",
     "dependencies": {
+        "file-system": "^2.2.2",
         "minimist": "^1.2.5"
     }
 }
