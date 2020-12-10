@@ -1,6 +1,7 @@
 import minimist from 'minimist';
 import fs from 'fs';
 import printUserManual from './usermanual.js';
+import getList from './getlist.js';
 
 const args = minimist(process.argv);
 
@@ -12,7 +13,5 @@ if (Object.keys(args).length === 1) {
 }
 
 if (args.l === true) {
-    let fileContent;
-    fileContent = fs.readFileSync('./list.txt').toString();
-    console.log(fileContent)
+    getList();
 }
