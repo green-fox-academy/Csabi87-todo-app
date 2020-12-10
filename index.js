@@ -1,7 +1,8 @@
 import minimist from 'minimist';
 import fs from 'fs';
-import printUserManual from './usermanual.js';
+import { printUserManual, printErrorOnEmptyInput } from './usermessages.js';
 import getList from './getlist.js';
+import addToList from './addtolist.js';
 
 const args = minimist(process.argv);
 
@@ -14,4 +15,10 @@ if (Object.keys(args).length === 1) {
 
 if (args.l === true) {
     getList();
+}
+
+if (typeof args.a === 'string') {
+    addToList(args.a);
+} else if (args.a === true) {
+    printErrorOnEmptyInput();
 }
