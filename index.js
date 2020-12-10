@@ -10,3 +10,9 @@ if (Object.keys(args).length === 1) {
 } else if (args._.length > 2 || !Object.keys(args).every(arg => ['_', 'l', 'a', 'r', 'c'].includes(arg))) {
     printUserManual();
 }
+
+if (args.l === true) {
+    let fileContent;
+    fileContent = fs.readFileSync('./list.txt').toString();
+    console.log(fileContent)
+}
