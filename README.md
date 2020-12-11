@@ -1,6 +1,6 @@
 # Csabi87-todo-app
 
-$ todo
+$ index.js
 
 Parancssori Todo applikáció
 =============================
